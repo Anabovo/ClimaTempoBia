@@ -3,4 +3,81 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClimaTempoBia.MainPage"
              Shell.NavBarIsVisible="false">
+
+<Grid ColumnSpacing="10" 
+      RowSpacing="10">
+
+        <Grid.RowDefinitions>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+<Image Source="diadesol.png"
+       Grid.ColumnSpan="3"
+       Grid.RowSpan="5"
+       Aspect="AspectFill"/>
+
+<Frame Grid.RowSpan="4"
+       Grid.Column="0"
+       CornerRadius="20"
+       Margin="10, 200"
+       BackgroundColor="#F2F4F4"
+       Opacity=".6">
+</Frame>
+           
+<Frame Grid.Row="3"
+       Grid.Column="2"
+       BackgroundColor="#F2F4F4"
+       Opacity=".6"
+       Margin="5, 0, 5, 0">
+</Frame>
+
+
+
+
+
+
+
+
+
+
+
+</Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ContentPage>
