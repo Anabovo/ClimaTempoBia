@@ -5,18 +5,18 @@
              Shell.NavBarIsVisible="false">
 
 <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="170"/>
-            <RowDefinition Height="85"/>
-            <RowDefinition Height="85"/>
+       <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+       </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
+       <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+       </Grid.ColumnDefinitions>
 
 <Image x:Name="background"
        Source="diadesol.png"
@@ -25,15 +25,21 @@
        Grid.ColumnSpan="3"/>
 
 <Frame x:Name="FramedoTempo"
-       HeightRequest="170"
+       HeightRequest="160"
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
        VerticalOptions="Center"
        Grid.Row="1"
        Grid.RowSpan="2"
-       Margin="10">
+       Margin="0">
+
 
 <Grid>
+       <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>     
 
 <Label x:Name="temp"
        TextColor="Black"
@@ -48,16 +54,7 @@
        VerticalOptions="Start"
        HorizontalOptions="Center"
        FontAttributes="Bold"
-       Margin="0,10,0,0"/>
-
-<Label Text="Apucarana - PR"
-       TextColor="Black"
-       FontSize="10"
-       VerticalOptions="Center"
-       HorizontalOptions="Center"
-       FontAttributes="Bold"
-       Margin="0,200,0,0"/>
-
+       Grid.Row="0"/>
 
 <Label x:Name="city"
        TextColor="Black"
@@ -65,13 +62,34 @@
        VerticalOptions="End"
        HorizontalOptions="Center"
        FontAttributes="Bold"/>
-     
-</Grid>       
 
+<Label Text="Apucarana - PR"
+       TextColor="Black"
+       FontSize="10"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontAttributes="Bold"
+       Grid.Row="2"/>  
 
+<Label x:Name="description"
+       TextColor="Black"
+       FontSize="11"
+       VerticalOptions="End"
+       HorizontalOptions="Center"
+       FontAttributes="Bold"/>
+
+<Label Text="Ensolarado"
+       TextColor="Black"
+       FontSize="10"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontAttributes="Bold"
+       Grid.Row="1"/> 
+
+   </Grid>       
 </Frame>
 
-<Frame x:Name="FrameDaChuva"
+<Frame x:Name="FrameChuvisco"
        HeightRequest="80"
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
@@ -79,33 +97,32 @@
        Grid.Row="1"
        Grid.Column="1"
        Margin="5">
+<Grid>
+       <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>     
 
 <VerticalStackLayout>
 
-<Label Text="Chuva"
-       TextColor="Black"
-       FontSize="11"
-       VerticalOptions="Start"
-       HorizontalOptions="Center"
-       FontAttributes="Bold"/>
-
-<Label Text="Chuva:"
-       TextColor="Black"
-       FontSize="8"
-       VerticalOptions="Center"
-       HorizontalOptions="Start"/>
-                     
-<Label x:Name="Rain"
+<Label x:Name="rain"
        TextColor="Black"
        FontSize="8"
        VerticalOptions="Center"
        HorizontalOptions="End"/>
 
-<Label Text="Humidade:"
+<Label Text="Chuva:"
        TextColor="Black"
-       FontSize="10"
-       VerticalOptions="End"
-       HorizontalOptions="Start"/>
+       FontSize="8"
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+       Grid.Row="0"
+       Grid.Column="0"/>
                      
 <Label x:Name="humidity"
        TextColor="Black"
@@ -113,10 +130,20 @@
        VerticalOptions="End"
        HorizontalOptions="End"/>
 
-</VerticalStackLayout>  
-     </Frame>
+<Label Text="Humidade:"
+       TextColor="Black"
+       FontSize="8"
+       VerticalOptions="End"
+       HorizontalOptions="Start"
+       Grid.Row="1"
+       Grid.Column="1"/>
+                     
 
-<Frame x:Name="FrameDoSol"
+        </VerticalStackLayout>
+    </Grid>  
+</Frame>
+
+<Frame x:Name="FrameSol"
        HeightRequest="80"
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
@@ -125,20 +152,18 @@
        Grid.Column="1"
        Margin="5">
 
+<Grid>
+       <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
 <VerticalStackLayout>
-
-<Label Text="Sol"
-       TextColor="Black"
-       FontSize="11"
-       VerticalOptions="Start"
-       HorizontalOptions="Center"
-       FontAttributes="Bold"/>
-
-<Label Text="Amanhecer:"
-       TextColor="Black"
-       FontSize="10"
-       VerticalOptions="Center"
-       HorizontalOptions="Start"/>
 
 <Label x:Name="sunrise"
        TextColor="Black"
@@ -146,11 +171,12 @@
        VerticalOptions="Center"
        HorizontalOptions="End"/>
 
-<Label Text="Anoitecer:"
+<Label Text="Manhã:"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
-       HorizontalOptions="Start"/> 
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+       Grid.Row="0"/>
 
 <Label x:Name="sunset"
        TextColor="Black"
@@ -158,10 +184,20 @@
        VerticalOptions="End"
        HorizontalOptions="End"/>
 
- </VerticalStackLayout>  
-       </Frame>
+<Label Text="Noite:"
+       TextColor="Black"
+       FontSize="10"
+       VerticalOptions="End"
+       HorizontalOptions="Start"
+       Grid.Row="0"/> 
 
-<Frame x:Name="FrameDoVento"
+
+
+         </VerticalStackLayout>  
+     </Grid>
+</Frame>
+
+<Frame x:Name="FrameVento"
        HeightRequest="80"
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
@@ -170,20 +206,18 @@
        Grid.Column="2"
        Margin="5">
 
+<Grid>
+       <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
 <VerticalStackLayout>
-
-<Label Text="Vento"
-       TextColor="Black"
-       FontSize="11"
-       VerticalOptions="Start"
-       HorizontalOptions="Center"
-       FontAttributes="Bold"/>
-
-<Label Text="Força:"
-       TextColor="Black"
-       FontSize="10"
-       VerticalOptions="Center"
-       HorizontalOptions="Start"/>
 
 <Label x:Name="wind_speedy"
        TextColor="Black"
@@ -191,10 +225,10 @@
        VerticalOptions="Center"
        HorizontalOptions="End"/>
 
-<Label Text="Direção:"
+<Label Text="Vento:"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
+       VerticalOptions="Center"
        HorizontalOptions="Start"/>
 
 <Label x:Name="wind_cardinal"
@@ -203,10 +237,19 @@
        VerticalOptions="End"
        HorizontalOptions="End"/>
 
-</VerticalStackLayout>  
-        </Frame>
+<Label Text="Direção:"
+       TextColor="Black"
+       FontSize="10"
+       VerticalOptions="End"
+       HorizontalOptions="Start"/>
 
-<Frame x:Name="FrameDaLua"
+
+
+        </VerticalStackLayout> 
+     </Grid>    
+</Frame>
+
+<Frame x:Name="FrameLua"
        HeightRequest="80"
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
@@ -214,15 +257,16 @@
        Grid.Row="2"
        Grid.Column="2"
        Margin="5">
+<Grid>
+       <Grid.RowDefinitions>
+          <RowDefinition Height="40"/>
+          <RowDefinition Height="40"/>
+       </Grid.RowDefinitions>
+
+       
 
 <VerticalStackLayout>
 
-<Label Text="Lua"
-       TextColor="Black"
-       FontSize="11"
-       VerticalOptions="Start"
-       HorizontalOptions="Center"
-       FontAttributes="Bold"/>
 
 <Label Text="Fase:"
        TextColor="Black"
@@ -237,8 +281,9 @@
        HorizontalOptions="End"/>
 
 
-</VerticalStackLayout>  
-       </Frame>
+      </VerticalStackLayout>
+    </Grid>  
+</Frame>
 
 <Frame x:Name="FrameFinal"
        HeightRequest="140"
