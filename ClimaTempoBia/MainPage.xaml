@@ -25,13 +25,14 @@
        Grid.ColumnSpan="3"/>
 
 <Frame x:Name="FramedoTempo"
-       HeightRequest="160"
+       HeightRequest="170"
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
        VerticalOptions="Center"
        Grid.Row="1"
        Grid.RowSpan="2"
-       Margin="0">
+       Opacity="0.6"
+       Margin="3">
 
 
 <Grid>
@@ -94,9 +95,11 @@
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
        VerticalOptions="Center"
+       Padding="10"
        Grid.Row="1"
        Grid.Column="1"
-       Margin="5">
+       Margin="0"
+       Opacity="0.6">
 <Grid>
        <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -108,17 +111,18 @@
             <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>     
 
-<VerticalStackLayout>
 
 <Label x:Name="rain"
        TextColor="Black"
-       FontSize="8"
+       FontSize="10"
        VerticalOptions="Center"
-       HorizontalOptions="End"/>
+       HorizontalOptions="End"
+       Grid.Row="0"
+       Grid.Column="1"/>
 
 <Label Text="Chuva:"
        TextColor="Black"
-       FontSize="8"
+       FontSize="10"
        VerticalOptions="Center"
        HorizontalOptions="Start"
        Grid.Row="0"
@@ -127,19 +131,21 @@
 <Label x:Name="humidity"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
-       HorizontalOptions="End"/>
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+        Grid.Row="1"
+       Grid.Column="1"/>
 
-<Label Text="Humidade:"
+<Label Text="Hum:"
        TextColor="Black"
-       FontSize="8"
+       FontSize="10"
        VerticalOptions="End"
        HorizontalOptions="Start"
        Grid.Row="1"
-       Grid.Column="1"/>
+       Grid.Column="0"/>
                      
 
-        </VerticalStackLayout>
+        
     </Grid>  
 </Frame>
 
@@ -148,9 +154,11 @@
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
        VerticalOptions="Center"
+       Padding="10"
        Grid.Row="2"
        Grid.Column="1"
-       Margin="5">
+       Margin="0"
+       Opacity="0.6">
 
 <Grid>
        <Grid.RowDefinitions>
@@ -163,37 +171,41 @@
             <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>
 
-<VerticalStackLayout>
+
 
 <Label x:Name="sunrise"
        TextColor="Black"
        FontSize="10"
        VerticalOptions="Center"
-       HorizontalOptions="End"/>
+       HorizontalOptions="End"
+       Grid.Row="0"
+       Grid.Column="1"/>
 
 <Label Text="Manhã:"
        TextColor="Black"
        FontSize="10"
        VerticalOptions="Center"
        HorizontalOptions="Start"
-       Grid.Row="0"/>
+       Grid.Row="0"
+       Grid.Column="0"/>
 
 <Label x:Name="sunset"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
-       HorizontalOptions="End"/>
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+       Grid.Row="1"
+       Grid.Column="0"/>
 
 <Label Text="Noite:"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
+       VerticalOptions="Center"
        HorizontalOptions="Start"
-       Grid.Row="0"/> 
+       Grid.Row="1"
+       Grid.Column="0"/> 
 
-
-
-         </VerticalStackLayout>  
+ 
      </Grid>
 </Frame>
 
@@ -202,9 +214,11 @@
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
        VerticalOptions="Center"
+       Padding="10"
        Grid.Row="1"
        Grid.Column="2"
-       Margin="5">
+       Margin="0"
+       Opacity="0.6">
 
 <Grid>
        <Grid.RowDefinitions>
@@ -217,35 +231,43 @@
             <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>
 
-<VerticalStackLayout>
+
 
 <Label x:Name="wind_speedy"
        TextColor="Black"
        FontSize="10"
        VerticalOptions="Center"
-       HorizontalOptions="End"/>
+       HorizontalOptions="Start"
+       Grid.Row="0"
+       Grid.Column="1"/>
 
 <Label Text="Vento:"
        TextColor="Black"
        FontSize="10"
        VerticalOptions="Center"
-       HorizontalOptions="Start"/>
+       HorizontalOptions="Start"
+       Grid.Row="0"
+       Grid.Column="0"/>
 
 <Label x:Name="wind_cardinal"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
-       HorizontalOptions="End"/>
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+       Grid.Row="1"
+       Grid.Column="0"/>
 
 <Label Text="Direção:"
        TextColor="Black"
        FontSize="10"
-       VerticalOptions="End"
-       HorizontalOptions="Start"/>
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+        Grid.Row="1"
+       Grid.Column="0"/>
 
 
 
-        </VerticalStackLayout> 
+        
      </Grid>    
 </Frame>
 
@@ -254,34 +276,34 @@
        BackgroundColor="#F9F6F5"
        CornerRadius="20"
        VerticalOptions="Center"
+       Padding="10"
        Grid.Row="2"
        Grid.Column="2"
-       Margin="5">
+       Margin="0"
+       Opacity="0.6">
 <Grid>
        <Grid.RowDefinitions>
-          <RowDefinition Height="40"/>
-          <RowDefinition Height="40"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
        </Grid.RowDefinitions>
-
-       
-
-<VerticalStackLayout>
 
 
 <Label Text="Fase:"
        TextColor="Black"
        FontSize="10"
        VerticalOptions="Center"
-       HorizontalOptions="Start"/>
+       HorizontalOptions="Start"
+       Grid.Row="0"
+       Grid.Column="0"/>
 
 <Label x:Name="moon_phase"
        TextColor="Black"
        FontSize="10"
        VerticalOptions="Center"
-       HorizontalOptions="End"/>
+       HorizontalOptions="End"
+       Grid.Row="0"
+       Grid.Column="1"/>
 
-
-      </VerticalStackLayout>
     </Grid>  
 </Frame>
 
@@ -291,9 +313,11 @@
        CornerRadius="20"
        HorizontalOptions="Fill"
        VerticalOptions="End"
+       Padding="10"
        Grid.Row="3"
        Grid.ColumnSpan="4"
-       Margin="5">
+       Margin="5, 0, 5, 5"
+       Opacity="0.6">
 
         </Frame>
 </Grid>
