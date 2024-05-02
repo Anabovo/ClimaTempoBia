@@ -1,6 +1,6 @@
 namespace ClimaTempoBia;
 
-public class rasults
+public class Results
 { 
     public int temp {get; set;}
     public string condition_code {get; set;}
