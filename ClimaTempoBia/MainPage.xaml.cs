@@ -13,8 +13,8 @@ public partial class MainPage : ContentPage
 		{
 			try
 			{ 
-				var HttClient = new HttpClient();
-				var Response = await HttpClient.GetAsync(url);
+				var  httpClient = new HttpClient();
+				var Response = await httpClient.GetAsync(url);
 				if (Response.IsSuccessStatusCode)				
 				{
 					var content = await Response.Content.ReadAsStringAsync();
@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
 			if (resposta.results.moon_phase=="new")
 				moon_phase.Text = "Nova";
 
-			else if (resposta.results.moon_phasee=="first_quarter ")
+			else if (resposta.results.moon_phase=="first_quarter ")
 					moon_phase.Text = "Quarto Crescente";
 
 			else if (resposta.results.moon_phase=="waxing_gibbous ")
@@ -71,13 +71,27 @@ public partial class MainPage : ContentPage
 					moon_phase.Text = "Lua minguante";
 
 			if (resposta.results.currently=="dia")
+			
 			{
 				if(resposta.results.rain>=10)
-				   background.Source="diachuva.png";
-				else if (resposta.results.cloudness>=10)
+				   background.Source="diachuvoso.png";
+
+				else if (resposta.results.cloudiness>=10)
 						background.Source="dianublado.png";
+
 				else
-					background.Source="diaclaro.png";
+					background.Source="diadesol.png";
+			}
+			else
+			{
+				if (resposta.results.rain>=10)
+				   background.Source="noitechuvosa.png";
+
+				else  if (resposta.results.cloudiness>=10)
+				         background.Source ="noitenublada.png";
+						
+				else background.Source="noteberta.png";
+				     
 			}
 
 		}

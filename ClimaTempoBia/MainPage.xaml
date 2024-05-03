@@ -31,7 +31,7 @@
        VerticalOptions="Center"
        Grid.Row="1"
        Grid.RowSpan="2"
-       Opacity="0.6"
+       Opacity="0.8"
        Margin="3">
 
 
@@ -44,48 +44,32 @@
 
 <Label x:Name="temp"
        TextColor="Black"
-       FontSize="50"
-       VerticalOptions="Start"
-       HorizontalOptions="Start"
-       FontAttributes="Bold"/>
-
-<Label Text="23°"
-       TextColor="Black"
-       FontSize="20"
+       FontSize="30"
        VerticalOptions="Start"
        HorizontalOptions="Center"
        FontAttributes="Bold"
        Grid.Row="0"/>
+
+
 
 <Label x:Name="city"
        TextColor="Black"
        FontSize="11"
        VerticalOptions="End"
        HorizontalOptions="Center"
-       FontAttributes="Bold"/>
-
-<Label Text="Apucarana - PR"
-       TextColor="Black"
-       FontSize="10"
-       VerticalOptions="Center"
-       HorizontalOptions="Center"
        FontAttributes="Bold"
-       Grid.Row="2"/>  
+       Grid.Row="1"/>
+
+
 
 <Label x:Name="description"
        TextColor="Black"
        FontSize="11"
        VerticalOptions="End"
        HorizontalOptions="Center"
-       FontAttributes="Bold"/>
-
-<Label Text="Ensolarado"
-       TextColor="Black"
-       FontSize="10"
-       VerticalOptions="Center"
-       HorizontalOptions="Center"
        FontAttributes="Bold"
-       Grid.Row="1"/> 
+       Grid.Row="2"/>
+
 
    </Grid>       
 </Frame>
@@ -99,7 +83,7 @@
        Grid.Row="1"
        Grid.Column="1"
        Margin="0"
-       Opacity="0.6">
+       Opacity="0.8">
 <Grid>
        <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -158,7 +142,7 @@
        Grid.Row="2"
        Grid.Column="1"
        Margin="0"
-       Opacity="0.6">
+       Opacity="0.8">
 
 <Grid>
        <Grid.RowDefinitions>
@@ -195,7 +179,7 @@
        VerticalOptions="Center"
        HorizontalOptions="Start"
        Grid.Row="1"
-       Grid.Column="0"/>
+       Grid.Column="1"/>
 
 <Label Text="Noite:"
        TextColor="Black"
@@ -218,7 +202,7 @@
        Grid.Row="1"
        Grid.Column="2"
        Margin="0"
-       Opacity="0.6">
+       Opacity="0.8">
 
 <Grid>
        <Grid.RowDefinitions>
@@ -255,7 +239,7 @@
        VerticalOptions="Center"
        HorizontalOptions="Start"
        Grid.Row="1"
-       Grid.Column="0"/>
+       Grid.Column="1"/>
 
 <Label Text="Direção:"
        TextColor="Black"
@@ -280,7 +264,7 @@
        Grid.Row="2"
        Grid.Column="2"
        Margin="0"
-       Opacity="0.6">
+       Opacity="0.8">
 <Grid>
        <Grid.RowDefinitions>
           <RowDefinition Height="*"/>
@@ -317,7 +301,7 @@
        Grid.Row="3"
        Grid.ColumnSpan="4"
        Margin="5, 0, 5, 5"
-       Opacity="0.6">
+       Opacity="0.8">
 
         </Frame>
 </Grid>

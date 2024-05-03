@@ -2,5 +2,5 @@ namespace ClimaTempoBia;
 
 public class Resposta
 {
-    Results results {get; set;}
+   public Results results {get; set;}
 }
